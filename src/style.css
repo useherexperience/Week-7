@@ -98,7 +98,7 @@ form {
 
 .weather-temperature-container {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .weather-app-temperature {
@@ -113,6 +113,7 @@ form {
 .weather-app-unit {
     font-size: 32px;
     font-weight: 500;
+    margin-top: 16px;
 }
 
 #description {
@@ -135,13 +136,16 @@ strong {
     font-weight: 400;
     color: #3D5A80;
 }
-
+.weather-forecast {
+    gap: 16px;
+}
 .weather-forecast-date {
     text-align: center;
     color: rgba(39, 33, 66, 0.4);
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 16px;
+    text-transform: uppercase;
 }
 
 .weather-forecast-icon {
@@ -151,7 +155,7 @@ strong {
 
 .weather-forecast-temperatures {
     text-align: center;
-    color: #f65282;
+    color: #F1856A;
     margin-top: 8px;
     display: flex;
     justify-content: center;
@@ -159,4 +163,11 @@ strong {
 
 .weather-forecast-temperature {
     padding: 0 8px;
+}
+
+.weather-forecast-day {
+    border: solid 2px #98C1D9;
+    border-radius: 8px;
+    background-color: white;
+    padding: 24px;
 }
