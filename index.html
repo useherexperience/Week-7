@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla Weather Search</title>
+    <title>Vanilla Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,22 +14,33 @@
     <div class="weather-module">
         <header>
             <form>
-                <input type="search" placeholder="Enter a city..." required />
-                <input type="submit" value="Search" />
+                <input type="search" placeholder="Enter a city..." require class="search-form-input" />
+                <input type="submit" value="Search" class="search-form-btn" />
             </form>
         </header>
         <main>
-            <div>
-                <h1>Atlanta</h1>
-                <p>
-                    Saturday 07:48, Cloudy
-                    <br />
-                    Humidity: 66% , Wind: 0 MPH
-                </p>
+            <div class="weather-data">
+                <div class="weather-context">
+                    <div class="weather-city-time">
+                        <h1 class="weather-city">Atlanta</h1>
+                        <h3 class="weather-time">Saturday 7:32 AM EST</h3>
+                    </div>
+                    <p class="weather-details">
+                        Cloudy
+                        <br />
+                        Humidity: 66%
+                        </br>
+                        Wind: 0 MPH
+                    </p>
+                </div>
+                <div class="weather-temperature-container">
+                    <div class="weather-app-icon">☀</div>
+                    <div class="weather-app-temperature">50</div>
+                    <div class="weather-app-unit">°F</div>
+                </div>
             </div>
-            <div>☀️ 50 °F</div>
         </main>
-        <script src="/src/index.js"></script>
+        <script src="src/index.js"></script>
         <footer>
             <p>
                 This project was coded by
@@ -39,6 +50,5 @@
             </p>
         </footer>
     </div>
-
 </body>
 </html>
