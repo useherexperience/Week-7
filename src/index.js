@@ -18,6 +18,8 @@
     temperatureElement.innerHTML = Math.round(temperature);
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
+    getForecast(response.data.city); 
+
 }
 function formatDate(date) {
     let minutes = date.getMinutes();
@@ -53,8 +55,15 @@ function handleSearchSubmit(event) {
     searchCity(searchInput.value);
 }
 
-function displayForecast() {
-    let day = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+function getForecast(city) {
+    let apiKey = "5ff3b8d0tbd5308e03obc45a6fca001a";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+
+    let day = ["Sun", "Mon", "Tue", "Wed", "Thu"];
     let forecastHtml = "";
 
     day.forEach(function (day) {
@@ -83,7 +92,6 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Atlanta");
-displayForecast();
-
+getForecast("Atlanta");
 
 
