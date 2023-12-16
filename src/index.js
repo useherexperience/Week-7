@@ -1,4 +1,4 @@
-function refreshWeather(response) {
+﻿function refreshWeather(response) {
     let temperatureElement = document.querySelector("#temperature");
     let temperature = response.data.temperature.current;
     let cityElement = document.querySelector("#city");
@@ -53,7 +53,37 @@ function handleSearchSubmit(event) {
     searchCity(searchInput.value);
 }
 
+function displayForecast() {
+    let day = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+    let forecastHtml = "";
+
+    day.forEach(function (day) {
+        forecastHtml =
+            forecastHtml +
+            `
+      <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </div>
+          <div class="weather-forecast-temperature">9º</div>
+        </div>
+      </div>
+    `;
+    });
+
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHtml;
+}
+
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Atlanta");
+displayForecast();
+
+
+

@@ -129,3 +129,28 @@ strong {
     font-weight: 400;
     color: #3D5A80;
 }
+
+.weather-forecast {
+    text-align: center;
+    display: flex;
+    margin-top: 32px;
+}
+
+.weather-forecast-date {
+    font-size:18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.weather-forecast {
+    font-size: 16px;
+    gap: 32px;
+}
+
+.weather-forecast-max {
+    font-weight: 600;
+}
+
+.weather-forecast-min {
+    opacity: 0.6;
+}
