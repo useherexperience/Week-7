@@ -11,9 +11,12 @@ a {
     color: #EE6C4D;
 }
 
-footer {
+.footer {
     font-weight: 500;
     color: #293241;
+    text-transform: capitalize;
+    font-size: 14px;
+    text-align: center;
 }
 
 .weather-module {
@@ -109,7 +112,6 @@ form {
 
 .weather-app-unit {
     font-size: 32px;
-    margin-top: 16px;
     font-weight: 500;
 }
 
