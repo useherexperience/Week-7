@@ -70,6 +70,7 @@ form {
     color: #293241;
     font-size: 40px;
     line-height: normal;
+    text-transform: capitalize;
 }
 
 
@@ -94,6 +95,7 @@ form {
 
 .weather-temperature-container {
     display: flex;
+    align-items: center;
 }
 
 .weather-app-temperature {
@@ -102,11 +104,26 @@ form {
 }
 
 .weather-app-icon {
-    font-size: 44px;
-    margin: 16px;
+    font-size: 28px;
 }
 
 .weather-app-unit {
     font-size: 32px;
     margin-top: 16px;
+    font-weight: 500;
+}
+
+#description {
+    text-transform: capitalize;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+strong {
+    color: #293241;
+}
+
+.weather-details {
+    font-weight: 400;
+    color: #3D5A80;
 }
