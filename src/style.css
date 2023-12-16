@@ -1,0 +1,15 @@
+body {
+    background-color: #f9f7fe;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.weather-module {
+    background: white;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 30px 50px rgba(65,50,100,0.08);
+    padding: 30px;
+    border-radius: 20px;
+}
